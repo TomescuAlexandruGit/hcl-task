@@ -19,3 +19,4 @@ test('displays area of a triangle with given height and width', () => {
 
   expect(screen.getByText('Area of the triangle: 100')).toBeInTheDocument();
 });
+
