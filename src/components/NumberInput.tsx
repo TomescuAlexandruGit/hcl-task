@@ -1,17 +1,20 @@
 import React from 'react';
+import './NumberInput.css';
 
 interface NumberInputProps {
+    id: string;
     label: string;
     value: number | '';
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    id: string;
 }
 
-const NumberInput: React.FC<NumberInputProps> = ({ label, value, onChange, id }) => {
+const NumberInput: React.FC<NumberInputProps> = ({ id, label, value, onChange }) => {
     return (
-        <div className="number-input">
-            <label htmlFor={id}>{label}</label>
-            <input id={id} type="number" value={value} onChange={onChange} />
+        <div className="number-input" id={id}>
+            <label>
+                {label}
+                <input type="number" value={value} onChange={onChange} />
+            </label>
         </div>
     );
 };
