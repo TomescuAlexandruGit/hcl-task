@@ -1,19 +1,18 @@
 import React from 'react';
+import './Display.css';
 
 interface DisplayProps {
+    id: string;
     label: string;
     content: string;
-    id: string;
 }
 
-const Display: React.FC<DisplayProps> = ({ label, content, id }) => {
+const Display: React.FC<DisplayProps> = ({ id, label, content }) => {
     return (
-        <div className="result">
-            <label htmlFor={id}>
+        <div className="display" id={id}>
+            <label>
                 {label}
-                <div id={id} className="output">
-                    {content}
-                </div>
+                <div className="output">{content}</div>
             </label>
         </div>
     );
