@@ -1,5 +1,5 @@
-import { calculateTriangleArea } from './utils/calculateTriangleArea';
-import { generateNumbers } from './utils/generateNumbers';
+import { calculateTriangleArea } from './calculateTriangleArea';
+import { generateNumbers } from './generateNumbers';
 
 test('calculates triangle area correctly', () => {
     const height = 10;
